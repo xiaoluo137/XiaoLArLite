@@ -9,7 +9,6 @@
 #pragma link off all classes;
 #pragma link off all functions;
 
-#pragma link C++ class sample+;
 #pragma link C++ class larlite::ChargeCal+;
 #pragma link C++ class larlite::TunedEdX+;
 //ADD_NEW_CLASS ... do not change this line

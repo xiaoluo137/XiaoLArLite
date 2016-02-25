@@ -30,13 +30,13 @@ SUBDIRS := recombination #ADD_NEW_SUBDIR ... do not remove this comment from thi
 .phony: all clean
 
 all:
-	@for i in $(SUBDIRS); do ( echo "" && echo "Compiling $$i..." && cd $(LARLITE_USERDEVDIR)/myana/$$i && $(MAKE) ) || exit $$?; done
+	@for i in $(SUBDIRS); do ( echo "" && echo "Compiling $$i..." && cd $(LARLITE_USERDEVDIR)/XiaoLArLite/$$i && $(MAKE) ) || exit $$?; done
 #####################################################################################
 #
 # CLEANs...
 #
 clean:
-	@for i in $(SUBDIRS); do ( echo "" && echo "Cleaning $$i..." && cd $(LARLITE_USERDEVDIR)/myana/$$i && $(MAKE) clean && rm -f $(LARLITE_LIBDIR)/$$i.* ) || exit $$?; done
+	@for i in $(SUBDIRS); do ( echo "" && echo "Cleaning $$i..." && cd $(LARLITE_USERDEVDIR)/XiaoLArLite/$$i && $(MAKE) clean && rm -f $(LARLITE_LIBDIR)/$$i.* ) || exit $$?; done
 
 #####################################################################################
 #
@@ -44,13 +44,13 @@ clean:
 #
 doxygen:
 	@echo 'dOxygenising your code...'
-	@mkdir -p $(LARLITE_USERDEVDIR)/myana/doc/dOxygenMyProject
-	@doxygen $(LARLITE_USERDEVDIR)/myana/doc/doxygenMyProject.script
+	@mkdir -p $(LARLITE_USERDEVDIR)/XiaoLArLite/doc/dOxygenMyProject
+	@doxygen $(LARLITE_USERDEVDIR)/XiaoLArLite/doc/doxygenMyProject.script
 
 doxygen+:
 	@echo 'dOxygenising MyProject + local-ROOT...'
-	@mkdir -p $(LARLITE_USERDEVDIR)/myana/doc/dOxygenMyProject+
-	@doxygen $(LARLITE_USERDEVDIR)/myana/doc/doxygenMyProject+.script
+	@mkdir -p $(LARLITE_USERDEVDIR)/XiaoLArLite/doc/dOxygenMyProject+
+	@doxygen $(LARLITE_USERDEVDIR)/XiaoLArLite/doc/doxygenMyProject+.script
 #
 #####################################################################################
 #EOF
